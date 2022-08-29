@@ -1,5 +1,10 @@
 # cisco-comamnd-sender
 Cisco, Zyxel, Ubiquiti, Sophos, Aruba, Mikrotik and others auto command sender
+<h3>Informations</h3>
+<pre>
+Example : python cisco_connection.py cisco_ios localhost user pass
+Create a veri.txt and write all commands in text file
+</pre>
 <h3>Supporting Switch Platforms</h3>
 <pre>
 a10
