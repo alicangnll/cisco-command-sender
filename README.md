@@ -5,6 +5,10 @@ Cisco, Zyxel, Ubiquiti, Sophos, Aruba, Mikrotik and others auto command sender
 Example : python cisco_connection.py cisco_ios localhost user pass
 Create a veri.txt and write all commands in text file
 </pre>
+<h3>Installing</h3>
+<pre>
+pip install netmiko
+</pre>
 <h3>Supporting Switch Platforms</h3>
 <pre>
 a10
