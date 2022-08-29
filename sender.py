@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 import sys, os
 # Example : python cisco_connection.py cisco_ios localhost user pass
 # Create a veri.txt and write all commands in text file
-# Supporting Platforms
+# Supporting Platform(s)
 """ a10
 accedian
 adtran_os
