@@ -1,8 +1,8 @@
 from netmiko import ConnectHandler
 import sys, os
-# Example : python cisco_connection.py cisco_ios localhost user pass
+# Example : python cisco_connection.py cisco_xe localhost user pass veri.txt
 # Create a veri.txt and write all commands in text file
-# Supporting Platform(s)
+# Supporting Platforms
 """ a10
 accedian
 adtran_os
@@ -121,14 +121,18 @@ yamaha
 zte_zxros
 zyxel_os
 """
-baglanti = ConnectHandler(device_type="" + str(sys.argv[1]) + "",host="" + str(sys.argv[2]) + "",username="" + str(sys.argv[3]) + "",password="" + str(sys.argv[4]) + "")
-if(os.path.exists("veri.txt")):
-    with open('veri.txt') as f:
-        for line in f:
-            cikti = baglanti.send_command("" + str(line.strip()) + "")
-            print(cikti)
-            if 'str' in line:
-                break
-
-else:
-    print("Dosya bulunamadi")
+try:
+    baglanti = ConnectHandler(device_type="" + str(sys.argv[1]) + "",host="" + str(sys.argv[2]) + "",username="" + str(sys.argv[3]) + "",password="" + str(sys.argv[4]) + "")
+    dosyadi = str(sys.argv[5])
+    if(os.path.exists(dosyadi)):
+        with open(dosyadi) as f:
+            for line in f:
+                cikti = baglanti.send_command("" + str(line.strip()) + "")
+                print(cikti)
+                if 'str' in line:
+                    break
+                
+    else:
+        print("Dosya bulunamadi")
+except:
+    print("Bağlantı kurulamadı!")
