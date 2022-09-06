@@ -2,8 +2,7 @@
 Cisco, Zyxel, Ubiquiti, Sophos, Aruba, Mikrotik and others auto command sender
 <h3>Informations</h3>
 <pre>
-Example : python cisco_connection.py cisco_ios localhost user pass
-Create a veri.txt and write all commands in text file
+Example : python cisco_connection.py cisco_xe localhost user pass veri.txt
 </pre>
 <h3>Installing</h3>
 <pre>
